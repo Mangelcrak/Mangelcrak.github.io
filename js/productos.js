@@ -108,6 +108,7 @@ const PRODUCTOS = [
     tono: "mantequilla",
     opciones: "Beige|Rosado|Verde menta",
     destacado: true,
+    agotado: true,
   },
   {
     id: "taza-ceramica",
