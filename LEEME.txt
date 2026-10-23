@@ -1,0 +1,10 @@
+IMÁGENES GENERALES DE LA TIENDA
+-------------------------------
+  compartir.jpg   Imagen que aparece al compartir el enlace en WhatsApp,
+                  Facebook o X. Tamaño: 1200 x 630 px, menos de 300 KB.
+                  Ya está enlazada en index.html y catalogo.html.
+
+Más adelante puedes guardar aquí: logo, banners, fondos o iconos.
+Mismas reglas de nombres: minúsculas, sin espacios, sin tildes.
+
+Puedes borrar este archivo cuando subas tus imágenes.

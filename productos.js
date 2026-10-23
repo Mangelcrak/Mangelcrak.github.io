@@ -16,7 +16,7 @@
    ------------------------------------------------------------ */
 const TIENDA = {
   nombre: "SamHome",
-  whatsapp: "573006965916",
+  whatsapp: "573000000000",
   correo: "hola@samhome.co",
   instagram: ""
 };
@@ -45,7 +45,7 @@ const CATEGORIAS = [
       - tono: durazno | menta | lavanda | mantequilla | cielo | rosa
       - etiqueta: texto corto opcional ("Nuevo", "-20%"). Bórrala si no quieres.
       - destacado: true  -> el producto sale también en el inicio.
-      - Con fotos: agrega  imagen: "img/vela.jpg"  en la línea.
+      - Con fotos: agrega  imagen: "img/productos/vela-vainilla.jpg"  en la línea.
    ⚠️ "id": único por producto, en minúsculas, sin espacios ni tildes.
    ⚠️ "categoria": debe ser el id de una categoría de arriba.
    ⚠️ Conserva las comillas "", los dos puntos : y la coma al final de cada línea.
