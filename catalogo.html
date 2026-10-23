@@ -14,7 +14,7 @@
   <meta property="og:title" content="Catálogo · SamHome">
   <meta property="og:description" content="Mira todos los productos de SamHome: hogar, bienestar, belleza, accesorios y regalos. Busca, filtra y pide por WhatsApp.">
   <meta property="og:url" content="https://mangelcrak.github.io/catalogo.html">
-  <meta property="og:image" content="https://mangelcrak.github.io/img/compartir.jpg">
+  <meta property="og:image" content="https://mangelcrak.github.io/img/general/compartir.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +40,7 @@
   <noscript><p class="aviso">Para ver los productos y comprar necesitas activar JavaScript en tu navegador.</p></noscript>
 
   <!-- ✏️ BARRA SUPERIOR (se puede editar y se puede ocultar completa). -->
-  <p class="aviso">Envío gratis en compras desde $150.000</p>
+  <p class="aviso" data-aviso>Envío gratis en compras desde $150.000</p>
 
   <!-- ⚠️ CABECERA: puedes cambiar el texto de los enlaces del menú.
        NO la ocultes ni cambies los id, el botón del carrito ni el botón del menú móvil. -->
@@ -83,7 +83,7 @@
       <div class="chips" id="chips" role="group" aria-label="Filtrar por categoría"></div>
 
       <p class="resultado" id="resultado" aria-live="polite"></p>
-      <div class="productos" id="productos"></div>
+      <div class="productos" id="productos"><p class="cargando">Cargando productos…</p></div>
 
       <div class="sin-resultados" id="sin-resultados" hidden>
         <h2>No encontramos productos con esa búsqueda</h2>
@@ -105,7 +105,7 @@
     </div>
     <div>
       <h3>Ayuda</h3>
-      <a href="#">Envíos</a><a href="#">Cambios y devoluciones</a><a href="#">Preguntas frecuentes</a>
+      <a href="envios.html">Envíos</a><a href="cambios.html">Cambios y devoluciones</a><a href="preguntas-frecuentes.html">Preguntas frecuentes</a><a href="privacidad.html">Política de privacidad</a>
     </div>
     <div>
       <h3>Contacto</h3>
@@ -131,6 +131,8 @@
     </div>
 
     <form class="drawer__pie" id="pedido" hidden>
+      <p class="envio" id="envio" hidden></p>
+      <p class="envio" id="envio" hidden></p>
       <p class="total"><span>Total</span><strong id="total">$0</strong></p>
       <label for="nombre">Tu nombre</label>
       <input id="nombre" required autocomplete="name">
@@ -145,9 +147,9 @@
 
   <!-- ⚠️ SCRIPTS: NO TOCAR NI CAMBIAR EL ORDEN. -->
   <script src="js/productos.js"></script>
-<script src="js/carrito.js"></script>
-<script src="js/catalogo.js"></script>
-<script src="js/menu.js"></script>
-<script src="js/whatsapp.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/catalogo.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/ajustes.js"></script>
 </body>
 </html>
