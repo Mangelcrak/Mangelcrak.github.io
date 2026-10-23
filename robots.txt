@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.mangelcrak.github.io/sitemap.xml
+Sitemap: https://mangelcrak.github.io/sitemap.xml
