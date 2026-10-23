@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo · Nube</title>
+  <meta name="description" content="Mira todos los productos de Nube: hogar, bienestar, belleza, accesorios y regalos. Busca, filtra y pide por WhatsApp.">
+  <meta name="theme-color" content="#dcd3f5">
+  <link rel="canonical" href="https://www.tudominio.com/catalogo.html">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E☁️%3C/text%3E%3C/svg%3E">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nube">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:title" content="Catálogo · Nube">
+  <meta property="og:description" content="Mira todos los productos de Nube: hogar, bienestar, belleza, accesorios y regalos. Busca, filtra y pide por WhatsApp.">
+  <meta property="og:url" content="https://www.tudominio.com/catalogo.html">
+  <meta property="og:image" content="https://www.tudominio.com/img/compartir.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-pagina="catalogo">
+
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+  <noscript><p class="aviso">Para ver los productos y comprar necesitas activar JavaScript en tu navegador.</p></noscript>
+
+  <p class="aviso">Envío gratis en compras desde $150.000</p>
+
+  <header class="cabecera">
+    <a class="logo" href="index.html">nube</a>
+    <nav class="menu" id="menu" aria-label="Principal">
+      <a href="catalogo.html" aria-current="page">Catálogo</a>
+      <a href="index.html#categorias">Categorías</a>
+      <a href="#destacados">Destacados</a>
+      <a href="index.html#beneficios">Beneficios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="carrito" id="abrir-carrito" aria-label="Carrito, 0 productos">Carrito <span id="contador">0</span></button>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><span></span></button>
+  </header>
+
+  <main id="contenido">
+    <section class="seccion catalogo">
+      <h1 class="catalogo__titulo">Catálogo</h1>
+
+      <div class="herramientas">
+        <div class="buscador">
+          <label class="sr" for="buscar">Buscar productos</label>
+          <input id="buscar" type="search" placeholder="Buscar velas, cremas, regalos…" autocomplete="off">
+        </div>
+        <div class="orden">
+          <label for="orden">Ordenar por</label>
+          <select id="orden">
+            <option value="relevancia">Recomendados</option>
+            <option value="menor">Menor precio</option>
+            <option value="mayor">Mayor precio</option>
+            <option value="nombre">Nombre A–Z</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="chips" id="chips" role="group" aria-label="Filtrar por categoría"></div>
+
+      <p class="resultado" id="resultado" aria-live="polite"></p>
+      <div class="productos" id="productos"></div>
+
+      <div class="sin-resultados" id="sin-resultados" hidden>
+        <h2>No encontramos productos con esa búsqueda</h2>
+        <p>Prueba con otra palabra o revisa todas las categorías.</p>
+        <button class="boton boton--suave" id="limpiar">Quitar filtros</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie" id="contacto">
+    <div>
+      <a class="logo" href="index.html">nube</a>
+      <p>Productos lindos para tu casa y para ti.</p>
+    </div>
+    <div>
+      <h3>Tienda</h3>
+      <a href="catalogo.html?cat=hogar">Hogar</a><a href="catalogo.html?cat=belleza">Belleza</a><a href="catalogo.html?cat=accesorios">Accesorios</a><a href="catalogo.html?cat=regalos">Regalos</a>
+    </div>
+    <div>
+      <h3>Ayuda</h3>
+      <a href="#">Envíos</a><a href="#">Cambios y devoluciones</a><a href="#">Preguntas frecuentes</a>
+    </div>
+    <div>
+      <h3>Contacto</h3>
+      <a href="mailto:hola@nube.co">hola@nube.co</a><a href="#">WhatsApp</a><a href="#">Instagram</a>
+    </div>
+    <p class="pie__legal">© 2026 Nube. Todos los derechos reservados.</p>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Tu carrito">
+    <div class="drawer__cab">
+      <h2>Tu carrito</h2>
+      <button class="drawer__cerrar" id="cerrar" aria-label="Cerrar carrito">✕</button>
+    </div>
+
+    <div class="drawer__cuerpo">
+      <div id="vacio" class="vacio">
+        <p>Aún no has agregado nada.</p>
+        <button class="boton boton--suave" id="seguir">Ver productos</button>
+      </div>
+      <ul id="items" class="items"></ul>
+    </div>
+
+    <form class="drawer__pie" id="pedido" hidden>
+      <p class="total"><span>Total</span><strong id="total">$0</strong></p>
+      <label for="nombre">Tu nombre</label>
+      <input id="nombre" required autocomplete="name">
+      <label for="direccion">Ciudad y dirección de entrega</label>
+      <input id="direccion" required autocomplete="street-address">
+      <label for="notas">Notas (opcional)</label>
+      <input id="notas" placeholder="Color, talla, hora de entrega…">
+      <button class="boton boton--wa" type="submit">Enviar pedido por WhatsApp</button>
+      <p class="nota">Confirmamos disponibilidad y envío por el chat. El pago se acuerda ahí.</p>
+    </form>
+  </aside>
+
+  <script src="productos.js"></script>
+  <script src="carrito.js"></script>
+  <script src="catalogo.js"></script>
+  <script src="menu.js"></script>
+  <script src="whatsapp.js"></script>
+</body>
+</html>

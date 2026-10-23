@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nube · Tienda de productos para tu día a día</title>
+  <meta name="description" content="Hogar, bienestar, belleza, accesorios y regalos en una sola tienda. Pide por WhatsApp y recibe en todo el país.">
+  <meta name="theme-color" content="#dcd3f5">
+  <link rel="canonical" href="https://www.tudominio.com/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E☁️%3C/text%3E%3C/svg%3E">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nube">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:title" content="Nube · Tienda de productos para tu día a día">
+  <meta property="og:description" content="Hogar, bienestar, belleza, accesorios y regalos en una sola tienda. Pide por WhatsApp y recibe en todo el país.">
+  <meta property="og:url" content="https://www.tudominio.com/">
+  <meta property="og:image" content="https://www.tudominio.com/img/compartir.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Store",
+        "@id": "https://www.tudominio.com/#tienda",
+        "name": "Nube",
+        "url": "https://www.tudominio.com/",
+        "description": "Tienda en línea de hogar, bienestar, belleza, accesorios y regalos con envíos a todo el país.",
+        "email": "hola@nube.co",
+        "areaServed": "CO",
+        "priceRange": "$$"
+      },
+      {
+        "@type": "WebSite",
+        "name": "Nube",
+        "url": "https://www.tudominio.com/",
+        "inLanguage": "es"
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <a class="saltar" href="#inicio">Saltar al contenido</a>
+  <noscript><p class="aviso">Para ver los productos y comprar necesitas activar JavaScript en tu navegador.</p></noscript>
+
+  <p class="aviso">Envío gratis en compras desde $150.000</p>
+
+  <header class="cabecera">
+    <a class="logo" href="#inicio">nube</a>
+    <nav class="menu" id="menu" aria-label="Principal">
+      <a href="catalogo.html">Catálogo</a>
+      <a href="#categorias">Categorías</a>
+      <a href="#destacados">Destacados</a>
+      <a href="#beneficios">Beneficios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="carrito" id="abrir-carrito" aria-label="Carrito, 0 productos">Carrito <span id="contador">0</span></button>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><span></span></button>
+  </header>
+
+  <main id="inicio">
+
+    <section class="hero">
+      <div class="hero__texto">
+        <h1>Todo lo lindo que necesitas, en un solo lugar</h1>
+        <p>Hogar, belleza, accesorios y regalos elegidos con cariño. Compra fácil y recíbelo en la puerta de tu casa.</p>
+        <div class="hero__acciones">
+          <a class="boton" href="#destacados">Ver productos</a>
+          <a class="boton boton--suave" href="#categorias">Explorar categorías</a>
+        </div>
+      </div>
+
+      <div class="hero__collage" aria-hidden="true">
+        <span class="forma forma--1">🕯️</span>
+        <span class="forma forma--2">🧴</span>
+        <span class="forma forma--3">👜</span>
+        <span class="forma forma--4">🎁</span>
+      </div>
+    </section>
+
+    <section class="seccion" id="categorias">
+      <h2>Compra por categoría</h2>
+      <div class="categorias">
+        <a class="cat cat--durazno" href="catalogo.html?cat=hogar"><span>🏠</span>Hogar</a>
+        <a class="cat cat--menta" href="catalogo.html?cat=bienestar"><span>🌿</span>Bienestar</a>
+        <a class="cat cat--lavanda" href="catalogo.html?cat=belleza"><span>💄</span>Belleza</a>
+        <a class="cat cat--mantequilla" href="catalogo.html?cat=accesorios"><span>👜</span>Accesorios</a>
+        <a class="cat cat--cielo" href="catalogo.html?cat=regalos"><span>🎁</span>Regalos</a>
+      </div>
+    </section>
+
+    <section class="seccion" id="destacados">
+      <div class="seccion__cabecera">
+        <h2>Los más pedidos de la semana</h2>
+        <a class="enlace" href="catalogo.html">Ver todo el catálogo</a>
+      </div>
+
+      <div class="productos" id="productos"></div>
+    </section>
+
+    <section class="seccion beneficios" id="beneficios">
+      <h2>Comprar en Nube es sencillo</h2>
+      <ul>
+        <li class="tono-cielo"><h3>Envíos a todo el país</h3><p>Entrega en 2 a 5 días hábiles.</p></li>
+        <li class="tono-menta"><h3>Pago seguro</h3><p>Tarjeta, PSE, Nequi o contra entrega.</p></li>
+        <li class="tono-lavanda"><h3>Cambios sin complicarte</h3><p>Tienes 15 días para cambiar tu compra.</p></li>
+        <li class="tono-mantequilla"><h3>Atención por WhatsApp</h3><p>Te respondemos de lunes a sábado.</p></li>
+      </ul>
+    </section>
+
+    <section class="boletin">
+      <div>
+        <h2>Recibe un 10% en tu primera compra</h2>
+        <p>Suscríbete y te avisamos de lanzamientos y ofertas. Sin spam.</p>
+      </div>
+      <form class="boletin__form" action="#" method="post">
+        <label class="sr" for="correo">Correo electrónico</label>
+        <input id="correo" type="email" placeholder="tucorreo@ejemplo.com" required>
+        <button class="boton" type="submit">Quiero mi descuento</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="pie" id="contacto">
+    <div>
+      <a class="logo" href="#inicio">nube</a>
+      <p>Productos lindos para tu casa y para ti.</p>
+    </div>
+    <div>
+      <h3>Tienda</h3>
+      <a href="catalogo.html?cat=hogar">Hogar</a><a href="catalogo.html?cat=belleza">Belleza</a><a href="catalogo.html?cat=accesorios">Accesorios</a><a href="catalogo.html?cat=regalos">Regalos</a>
+    </div>
+    <div>
+      <h3>Ayuda</h3>
+      <a href="#">Envíos</a><a href="#">Cambios y devoluciones</a><a href="#">Preguntas frecuentes</a>
+    </div>
+    <div>
+      <h3>Contacto</h3>
+      <a href="mailto:hola@nube.co">hola@nube.co</a><a href="#">WhatsApp</a><a href="#">Instagram</a>
+    </div>
+    <p class="pie__legal">© 2026 Nube. Todos los derechos reservados.</p>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-label="Tu carrito">
+    <div class="drawer__cab">
+      <h2>Tu carrito</h2>
+      <button class="drawer__cerrar" id="cerrar" aria-label="Cerrar carrito">✕</button>
+    </div>
+
+    <div class="drawer__cuerpo">
+      <div id="vacio" class="vacio">
+        <p>Aún no has agregado nada.</p>
+        <button class="boton boton--suave" id="seguir">Ver productos</button>
+      </div>
+      <ul id="items" class="items"></ul>
+    </div>
+
+    <form class="drawer__pie" id="pedido" hidden>
+      <p class="total"><span>Total</span><strong id="total">$0</strong></p>
+      <label for="nombre">Tu nombre</label>
+      <input id="nombre" required autocomplete="name">
+      <label for="direccion">Ciudad y dirección de entrega</label>
+      <input id="direccion" required autocomplete="street-address">
+      <label for="notas">Notas (opcional)</label>
+      <input id="notas" placeholder="Color, talla, hora de entrega…">
+      <button class="boton boton--wa" type="submit">Enviar pedido por WhatsApp</button>
+      <p class="nota">Confirmamos disponibilidad y envío por el chat. El pago se acuerda ahí.</p>
+    </form>
+  </aside>
+
+  <script src="productos.js"></script>
+  <script src="carrito.js"></script>
+  <script src="menu.js"></script>
+  <script src="whatsapp.js"></script>
+</body>
+</html>
