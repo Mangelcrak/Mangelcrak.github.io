@@ -18,7 +18,7 @@ const TIENDA = {
   nombre: "SamHome",
   whatsapp: "573006965914",
   correo: "hola@samhome.co",
-  instagram: "@aruah",
+  instagram: "https://instagram.com/aruah/samhome",
 };
 
 /* ------------------------------------------------------------
