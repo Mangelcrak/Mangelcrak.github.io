@@ -35,7 +35,7 @@
 
   function actualizar() {
     const lista = filtrar();
-    document.title = estado.cat === "todas" ? "Catálogo · Nube" : `${nombreCat(estado.cat)} · Catálogo · Nube`;
+    document.title = estado.cat === "todas" ? "Catálogo · SamHome" : `${nombreCat(estado.cat)} · Catálogo · SamHome`;
     pintarProductos(lista);
     pintarChips();
     $("#sin-resultados").hidden = lista.length > 0;

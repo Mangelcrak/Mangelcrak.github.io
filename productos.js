@@ -4,7 +4,7 @@
    ============================================================ */
 
 const TIENDA = {
-  nombre: "Nube",
+  nombre: "SamHome",
   // Número de WhatsApp con código de país, sin + ni espacios (Colombia = 57)
   whatsapp: "573000000000"
 };

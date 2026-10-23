@@ -2,7 +2,7 @@
 (() => {
   const $ = (s) => document.querySelector(s);
   const dinero = (n) => "$" + n.toLocaleString("es-CO");
-  const CLAVE = "nube-carrito";
+  const CLAVE = "samhome-carrito";
 
   let carrito = [];
   try { carrito = JSON.parse(localStorage.getItem(CLAVE)) || []; } catch (e) { carrito = []; }
