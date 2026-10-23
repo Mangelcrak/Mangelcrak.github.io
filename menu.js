@@ -1,3 +1,4 @@
+/* ⚠️ NO NECESITAS EDITAR ESTE ARCHIVO. Maneja el menú hamburguesa en celular. */
 /* Menú hamburguesa para celular */
 (() => {
   const btn = document.querySelector("#menu-btn");

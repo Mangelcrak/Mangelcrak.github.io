@@ -1,3 +1,4 @@
+/* ⚠️ NO NECESITAS EDITAR ESTE ARCHIVO. Maneja el buscador, los filtros y el orden del catálogo. */
 /* Filtros, búsqueda y orden del catálogo */
 (() => {
   const $ = (s) => document.querySelector(s);

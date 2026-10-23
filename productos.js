@@ -1,14 +1,35 @@
 /* ============================================================
-   CONFIGURACIÓN Y CATÁLOGO
-   Aquí editas todo sin tocar el resto del código.
+   ⚙️ PANEL DE CONTROL DE LA TIENDA
+   Casi todo lo que cambia con el tiempo se edita en este archivo.
+   Regla de oro: cambia solo lo que está entre comillas "..." y
+   no borres comas, llaves { } ni corchetes [ ].
    ============================================================ */
 
+/* ------------------------------------------------------------
+   🏪 DATOS DE LA TIENDA
+   ✏️ nombre:    sale en los mensajes de WhatsApp.
+   ✏️ whatsapp:  con código de país, SIN +, espacios ni guiones.
+                 Colombia: 57 + celular de 10 dígitos -> "573001234567"
+   ✏️ correo:    aparece en el pie de página.
+   ✏️ instagram: enlace completo, ej. "https://instagram.com/samhome".
+                 Déjalo vacío "" para ocultar el enlace.
+   ------------------------------------------------------------ */
 const TIENDA = {
   nombre: "SamHome",
-  // Número de WhatsApp con código de país, sin + ni espacios (Colombia = 57)
-  whatsapp: "573000000000"
+  whatsapp: "573000000000",
+  correo: "hola@samhome.co",
+  instagram: ""
 };
 
+/* ------------------------------------------------------------
+   📂 CATEGORÍAS
+   ✏️ Puedes cambiar "nombre" y "tono" (durazno, menta, lavanda,
+      mantequilla, cielo o rosa).
+   ⚠️ El "id" va en minúsculas, sin espacios ni tildes, y debe ser
+      igual al "categoria" de los productos. Si cambias un id,
+      cámbialo también en los productos y en los enlaces del inicio.
+   ➕ Para agregar una: copia una línea completa (con su coma al final).
+   ------------------------------------------------------------ */
 const CATEGORIAS = [
   { id: "hogar",       nombre: "Hogar",       tono: "durazno" },
   { id: "bienestar",   nombre: "Bienestar",   tono: "menta" },
@@ -17,9 +38,20 @@ const CATEGORIAS = [
   { id: "regalos",     nombre: "Regalos",     tono: "cielo" }
 ];
 
-// tono: durazno | menta | lavanda | mantequilla | cielo | rosa
-// destacado: true  -> aparece en el inicio.   etiqueta: opcional.
-// Cuando tengas fotos, agrega  imagen: "img/vela.jpg"
+/* ------------------------------------------------------------
+   🛍️ PRODUCTOS (cada producto es una línea entre llaves { })
+   ✏️ Puedes cambiar: nombre, desc, precio, emoji, tono, etiqueta.
+      - precio: solo números, sin puntos ni símbolo  ->  39900
+      - tono: durazno | menta | lavanda | mantequilla | cielo | rosa
+      - etiqueta: texto corto opcional ("Nuevo", "-20%"). Bórrala si no quieres.
+      - destacado: true  -> el producto sale también en el inicio.
+      - Con fotos: agrega  imagen: "img/vela.jpg"  en la línea.
+   ⚠️ "id": único por producto, en minúsculas, sin espacios ni tildes.
+   ⚠️ "categoria": debe ser el id de una categoría de arriba.
+   ⚠️ Conserva las comillas "", los dos puntos : y la coma al final de cada línea.
+   ➕ Para agregar uno: copia una línea completa y cambia sus datos.
+   🙈 Para ocultar uno sin borrarlo: escribe // al comienzo de su línea.
+   ------------------------------------------------------------ */
 const PRODUCTOS = [
   { id: "vela-vainilla",   categoria: "hogar",      nombre: "Vela de soya aroma vainilla",   desc: "Dura hasta 40 horas",    precio: 39900, emoji: "🕯️", tono: "durazno",     etiqueta: "Nuevo", destacado: true },
   { id: "maceta-ceramica", categoria: "hogar",      nombre: "Maceta de cerámica mediana",    desc: "Con plato incluido",     precio: 44900, emoji: "🪴", tono: "menta",       etiqueta: "-20%",  destacado: true },

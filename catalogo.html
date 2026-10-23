@@ -22,12 +22,28 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body data-pagina="catalogo">
+<!--
+  =================== GUÍA RÁPIDA PARA EDITAR ===================
+  ✏️  SE PUEDE EDITAR LIBREMENTE: los textos entre etiquetas (títulos, párrafos,
+      botones), los emojis y los precios o nombres de ejemplo.
+  🙈  PARA OCULTAR UNA SECCIÓN: en VS Code selecciónala y presiona Ctrl+/ (Cmd+/ en Mac).
+      Repite lo mismo para volver a mostrarla.
+      Cada bloque de abajo dice si se puede ocultar o no.
+  ⚠️  NO borres ni cambies: los "id" (id="productos", id="drawer", id="menu"...),
+      los "class" ni las etiquetas script. El carrito, el menú y el catálogo dependen de ellos.
+  📞  Número de WhatsApp, correo, Instagram, productos y categorías NO se cambian aquí:
+      se cambian en el archivo productos.js
+  ================================================================
+-->
 
   <a class="saltar" href="#contenido">Saltar al contenido</a>
   <noscript><p class="aviso">Para ver los productos y comprar necesitas activar JavaScript en tu navegador.</p></noscript>
 
+  <!-- ✏️ BARRA SUPERIOR (se puede editar y se puede ocultar completa). -->
   <p class="aviso">Envío gratis en compras desde $150.000</p>
 
+  <!-- ⚠️ CABECERA: puedes cambiar el texto de los enlaces del menú.
+       NO la ocultes ni cambies los id, el botón del carrito ni el botón del menú móvil. -->
   <header class="cabecera">
     <a class="logo" href="index.html">SamHome</a>
     <nav class="menu" id="menu" aria-label="Principal">
@@ -42,6 +58,9 @@
   </header>
 
   <main id="contenido">
+    <!-- ⚠️ CATÁLOGO: puedes cambiar el título (h1) y los textos de ayuda.
+       NO borres ni cambies los id (buscar, orden, chips, productos, resultado, sin-resultados, limpiar):
+       el buscador y los filtros dependen de ellos. Los productos se editan en productos.js -->
     <section class="seccion catalogo">
       <h1 class="catalogo__titulo">Catálogo</h1>
 
@@ -74,6 +93,7 @@
     </section>
   </main>
 
+  <!-- ✏️ PIE DE PÁGINA: igual que en el inicio. Correo, WhatsApp e Instagram se cambian en productos.js -->
   <footer class="pie" id="contacto">
     <div>
       <a class="logo" href="index.html">SamHome</a>
@@ -89,11 +109,12 @@
     </div>
     <div>
       <h3>Contacto</h3>
-      <a href="mailto:hola@samhome.co">hola@samhome.co</a><a href="#">WhatsApp</a><a href="#">Instagram</a>
+      <a href="mailto:hola@samhome.co" data-correo>hola@samhome.co</a><a href="#" data-whatsapp>WhatsApp</a><a href="#" data-instagram>Instagram</a>
     </div>
     <p class="pie__legal">© 2026 SamHome. Todos los derechos reservados.</p>
   </footer>
 
+  <!-- ⚠️ CARRITO LATERAL: NO TOCAR NI OCULTAR. -->
   <div class="overlay" id="overlay"></div>
   <aside class="drawer" id="drawer" aria-label="Tu carrito">
     <div class="drawer__cab">
@@ -122,6 +143,7 @@
     </form>
   </aside>
 
+  <!-- ⚠️ SCRIPTS: NO TOCAR NI CAMBIAR EL ORDEN. -->
   <script src="productos.js"></script>
   <script src="carrito.js"></script>
   <script src="catalogo.js"></script>

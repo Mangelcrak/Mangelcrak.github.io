@@ -1,4 +1,5 @@
-/* Botón flotante de WhatsApp (usa el número de productos.js) */
+/* ⚠️ NO NECESITAS EDITAR ESTE ARCHIVO. Crea el botón flotante de WhatsApp y llena el correo,
+   WhatsApp e Instagram del pie de página con los datos de productos.js */
 (() => {
   const mensaje = `Hola ${TIENDA.nombre}, tengo una pregunta sobre sus productos.`;
   const a = document.createElement("a");
@@ -13,4 +14,24 @@
     </svg>
     <span>¿Te ayudamos?</span>`;
   document.body.appendChild(a);
+
+  // Pie de página: correo, WhatsApp e Instagram salen de productos.js
+  document.querySelectorAll("[data-correo]").forEach((el) => {
+    el.href = `mailto:${TIENDA.correo}`;
+    el.textContent = TIENDA.correo;
+  });
+  document.querySelectorAll("[data-whatsapp]").forEach((el) => {
+    el.href = `https://wa.me/${TIENDA.whatsapp}`;
+    el.target = "_blank";
+    el.rel = "noopener";
+  });
+  document.querySelectorAll("[data-instagram]").forEach((el) => {
+    if (TIENDA.instagram) {
+      el.href = TIENDA.instagram;
+      el.target = "_blank";
+      el.rel = "noopener";
+    } else {
+      el.hidden = true;
+    }
+  });
 })();

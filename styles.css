@@ -1,4 +1,15 @@
-/* ===== Tokens ===== */
+/* ============================================================
+   🎨 GUÍA RÁPIDA DEL ESTILO
+   ✏️ Colores y tipografías: se cambian en el bloque :root de abajo.
+   🎚️ Para mostrar u ocultar bloques: usa los INTERRUPTORES que están
+      al final de este archivo.
+   ⚠️ No borres llaves { } ni punto y coma ; y cambia solo los valores.
+   ============================================================ */
+
+/* ===== Colores y tipografías =====
+   ✏️ Cambia los códigos de color (#xxxxxx) para cambiar toda la paleta.
+      Puedes elegir colores en https://htmlcolorcodes.com
+   ⚠️ No cambies los nombres (lo que va antes de los dos puntos). */
 :root {
   --fondo: #fffafa;
   --tinta: #3b3550;
@@ -427,3 +438,34 @@ body.sin-scroll .wa-flotante { display: none; }
   .wa-flotante { width: 3.5rem; padding: 0; justify-content: center; }
   .wa-flotante span { display: none; }
 }
+
+
+/* ============================================================
+   🎚️ INTERRUPTORES DE VISIBILIDAD (seguros, no rompen nada)
+   Para OCULTAR algo: en la línea que tiene la regla, quita el
+   símbolo de comentario del comienzo (barra y asterisco) y el
+   del final (asterisco y barra). Deja solo la regla, por ejemplo:
+   .aviso { display: none; }
+   Para mostrarlo de nuevo, vuelve a ponerlos.
+   ============================================================ */
+
+/* Oculta la barra superior de envío gratis */
+/* .aviso { display: none; } */
+
+/* Oculta los emojis de la portada */
+/* .hero__collage { display: none; } .hero { grid-template-columns: 1fr; } */
+
+/* Oculta la sección de categorías */
+/* #categorias { display: none; } */
+
+/* Oculta los productos destacados del inicio */
+/* #destacados { display: none; } */
+
+/* Oculta los beneficios de comprar */
+/* .beneficios { display: none; } */
+
+/* Oculta la suscripción por correo */
+/* .boletin { display: none; } */
+
+/* Oculta el botón flotante de WhatsApp */
+/* .wa-flotante { display: none; } */

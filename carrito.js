@@ -1,3 +1,5 @@
+/* ⚠️ NO NECESITAS EDITAR ESTE ARCHIVO. Es el carrito y el envío del pedido por WhatsApp.
+   Si lo cambias, el carrito puede dejar de funcionar. Los datos se editan en productos.js */
 /* Carrito de compras con envío del pedido por WhatsApp */
 (() => {
   const $ = (s) => document.querySelector(s);
@@ -29,7 +31,8 @@
 
   // Dibuja una lista de productos (también la usa catalogo.js)
   window.pintarProductos = (lista) => {
-    $("#productos").innerHTML = lista.map(tarjeta).join("");
+    const contenedor = $("#productos");
+    if (contenedor) contenedor.innerHTML = lista.map(tarjeta).join("");
   };
   // En el inicio se muestran solo los destacados
   if (document.body.dataset.pagina !== "catalogo") {

@@ -26,7 +26,6 @@
         "name": "SamHome",
         "url": "https://mangelcrak.github.io/",
         "description": "Tienda en línea de hogar, bienestar, belleza, accesorios y regalos con envíos a todo el país.",
-        "email": "hola@samhome.co",
         "areaServed": "CO",
         "priceRange": "$$"
       },
@@ -45,12 +44,29 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<!--
+  =================== GUÍA RÁPIDA PARA EDITAR ===================
+  ✏️  SE PUEDE EDITAR LIBREMENTE: los textos entre etiquetas (títulos, párrafos,
+      botones), los emojis y los precios o nombres de ejemplo.
+  🙈  PARA OCULTAR UNA SECCIÓN: en VS Code selecciónala y presiona Ctrl+/ (Cmd+/ en Mac).
+      Repite lo mismo para volver a mostrarla.
+      Cada bloque de abajo dice si se puede ocultar o no.
+  ⚠️  NO borres ni cambies: los "id" (id="productos", id="drawer", id="menu"...),
+      los "class" ni las etiquetas script. El carrito, el menú y el catálogo dependen de ellos.
+  📞  Número de WhatsApp, correo, Instagram, productos y categorías NO se cambian aquí:
+      se cambian en el archivo productos.js
+  ================================================================
+-->
 
   <a class="saltar" href="#inicio">Saltar al contenido</a>
   <noscript><p class="aviso">Para ver los productos y comprar necesitas activar JavaScript en tu navegador.</p></noscript>
 
+  <!-- ✏️ BARRA SUPERIOR (se puede editar y se puede ocultar completa).
+       Cambia el texto del aviso o quita la oferta si no la ofreces. -->
   <p class="aviso">Envío gratis en compras desde $150.000</p>
 
+  <!-- ⚠️ CABECERA: puedes cambiar el texto de los enlaces del menú (Catálogo, Categorías...).
+       NO la ocultes ni cambies los id, el botón del carrito ni el botón del menú móvil. -->
   <header class="cabecera">
     <a class="logo" href="#inicio">SamHome</a>
     <nav class="menu" id="menu" aria-label="Principal">
@@ -66,6 +82,9 @@
 
   <main id="inicio">
 
+    <!-- ✏️ PORTADA: cambia el título (h1), el párrafo y el texto de los botones.
+       El grupo de emojis (hero__collage) se puede borrar u ocultar sin problema.
+       La portada completa se puede ocultar. -->
     <section class="hero">
       <div class="hero__texto">
         <h1>Todo lo lindo que necesitas, en un solo lugar</h1>
@@ -84,6 +103,9 @@
       </div>
     </section>
 
+    <!-- ✏️ CATEGORÍAS (se puede ocultar completa).
+       Puedes cambiar nombre y emoji. Si agregas una nueva, copia una existente y deja el enlace
+       como catalogo.html?cat=IDENTIFICADOR, igual al "id" de esa categoría en productos.js -->
     <section class="seccion" id="categorias">
       <h2>Compra por categoría</h2>
       <div class="categorias">
@@ -95,6 +117,9 @@
       </div>
     </section>
 
+    <!-- ⚠️ PRODUCTOS DESTACADOS: puedes cambiar el título y el texto del enlace.
+       NO borres el div con id="productos": ahí se dibujan los productos que vienen de productos.js.
+       Para quitar o agregar productos NO edites aquí, hazlo en productos.js -->
     <section class="seccion" id="destacados">
       <div class="seccion__cabecera">
         <h2>Los más pedidos de la semana</h2>
@@ -104,6 +129,8 @@
       <div class="productos" id="productos"></div>
     </section>
 
+    <!-- ✏️ BENEFICIOS (se puede ocultar completa).
+       Cambia los textos según tus condiciones reales de envío, pago y cambios. -->
     <section class="seccion beneficios" id="beneficios">
       <h2>Comprar en SamHome es sencillo</h2>
       <ul>
@@ -114,6 +141,8 @@
       </ul>
     </section>
 
+    <!-- ✏️ SUSCRIPCIÓN (se puede ocultar completa).
+       OJO: por ahora es solo diseño, el formulario todavía no guarda ni envía los correos. -->
     <section class="boletin">
       <div>
         <h2>Recibe un 10% en tu primera compra</h2>
@@ -127,6 +156,9 @@
     </section>
   </main>
 
+  <!-- ✏️ PIE DE PÁGINA: puedes cambiar los textos y los enlaces de Tienda y Ayuda.
+       El correo, WhatsApp e Instagram se llenan solos desde productos.js (no los cambies aquí).
+       Los enlaces de Ayuda (Envíos, Cambios, Preguntas frecuentes) aún no llevan a ninguna página. -->
   <footer class="pie" id="contacto">
     <div>
       <a class="logo" href="#inicio">SamHome</a>
@@ -142,11 +174,12 @@
     </div>
     <div>
       <h3>Contacto</h3>
-      <a href="mailto:hola@samhome.co">hola@samhome.co</a><a href="#">WhatsApp</a><a href="#">Instagram</a>
+      <a href="mailto:hola@samhome.co" data-correo>hola@samhome.co</a><a href="#" data-whatsapp>WhatsApp</a><a href="#" data-instagram>Instagram</a>
     </div>
     <p class="pie__legal">© 2026 SamHome. Todos los derechos reservados.</p>
   </footer>
 
+  <!-- ⚠️ CARRITO LATERAL: NO TOCAR NI OCULTAR. Es el panel que se abre al pulsar "Carrito". -->
   <div class="overlay" id="overlay"></div>
   <aside class="drawer" id="drawer" aria-label="Tu carrito">
     <div class="drawer__cab">
@@ -175,6 +208,7 @@
     </form>
   </aside>
 
+  <!-- ⚠️ SCRIPTS: NO TOCAR NI CAMBIAR EL ORDEN. Hacen funcionar el carrito, el menú y el botón de WhatsApp. -->
   <script src="productos.js"></script>
   <script src="carrito.js"></script>
   <script src="menu.js"></script>
