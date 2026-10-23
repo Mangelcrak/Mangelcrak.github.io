@@ -1,6 +1,6 @@
 /* ⚠️ NO NECESITAS EDITAR ESTE ARCHIVO. Maneja el buscador, los filtros y el orden del catálogo. */
 /* Filtros, búsqueda y orden del catálogo */
-(() => {
+LISTO.then(() => {
   const $ = (s) => document.querySelector(s);
   const limpio = (t) => t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
@@ -70,4 +70,4 @@
 
   $("#buscar").value = estado.q;
   actualizar();
-})();
+});
